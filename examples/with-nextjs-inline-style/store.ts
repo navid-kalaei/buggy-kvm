@@ -1,5 +1,4 @@
 import { configureStore, Action } from '@reduxjs/toolkit'
-import 'redux-thunk/extend-redux'
 
 import rootReducer, { RootState } from './slices'
 
