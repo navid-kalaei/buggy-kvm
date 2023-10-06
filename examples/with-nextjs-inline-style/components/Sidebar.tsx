@@ -1,6 +1,7 @@
 import {FC, useEffect, useState} from 'react'
 import {useRouter} from 'next/router'
-import Drawer from 'rc-drawer'
+// import Drawer from 'rc-drawer'
+import {Drawer} from 'antd'
 import SidebarContent from './SidebarContent'
 import {convertQueryParamToString} from '../utils/utils'
 import {isSidebarStatusShown} from '../dtos/SidebarStatus'
@@ -30,6 +31,7 @@ const Sidebar: FC = () => {
     <Drawer
       autoFocus={false}
       open={isSidebarOpen}
+      closable={false}
       placement="left"
       mask={false}
       rootStyle={{
@@ -44,6 +46,9 @@ const Sidebar: FC = () => {
       }}
       getContainer={false}
       width={isSidebarOpen ? sidebarWidth : 0}
+      bodyStyle={{
+        padding: 0
+      }}
     >
       <SidebarCollapseButton/>
 

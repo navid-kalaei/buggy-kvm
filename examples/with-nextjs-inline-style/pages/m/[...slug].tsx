@@ -58,7 +58,7 @@ const MapPage: FC<MapPageProps> = (props) => {
         <Content>
           <Spin spinning={isLoading}>
             <div id="map">
-              {/*<Map/>*/}
+              <Map/>
             </div>
           </Spin>
         </Content>
